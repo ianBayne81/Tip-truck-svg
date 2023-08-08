@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+}
+
+#container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+
+#svg-area {
+    height: 500px;
+    width: 500px;
+}
+
+#body {
+    stroke: white;
+    stroke-width: 5;
+    fill: black;
+}
+
+#window {
+    stroke: white;
+    stroke-width: 2;
+    fill: black;
+}
+
+#tray {
+    stroke: white;
+    stroke-width: 2;
+    fill: black;
+}
+
+#dirt {
+    stroke: darkbrown;
+    stroke-width: 5;
+    fill: brown;
+}
+
+.wheels {
+    stroke: white;
+    stroke-width: 15;
+    fill: black;
+    stroke-dasharray: 2;
+    transform-box: fill-box;
+    transform-origin: 50% 50%;
+    animation-name: rotate;
+    animation-delay: 4.5s;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+}
+
+@keyframes rotate {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+
+.inner-wheels {
+    stroke: white;
+    stroke-width: 2;
+    fill: black;
+}
+
+.tip-tray {
+    animation-name: tip;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+@keyframes tip {
+    50% {transform: rotate(-20deg)}
+}
+
+.travel {
+    animation-name: travel;
+    animation-duration: 5s;
+    animation-delay: 4.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+@keyframes travel {
+    from {transform: translateX(0px);}
+    to {transform: translateX(300px)}
+}
+
+#dirt-pile {
+    stroke: brown;
+    stroke-width: 5;
+    fill: brown;
+}
