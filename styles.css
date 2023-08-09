@@ -18,6 +18,7 @@ body {
 }
 
 #svg-area {
+    transform: scale(.5);
     height: 500px;
     width: 500px;
 }
@@ -34,6 +35,12 @@ body {
     fill: black;
 }
 
+#chassis {
+    stroke: white;
+    stroke-width: 2;
+    fill: black;
+}
+
 #tray {
     stroke: white;
     stroke-width: 2;
@@ -41,16 +48,35 @@ body {
 }
 
 #dirt {
-    stroke: darkbrown;
+    stroke: brown;
     stroke-width: 5;
     fill: brown;
 }
+
+ .dirt-lines { 
+    stroke: transparent;
+    stroke-width: 5;
+    fill: none;
+    stroke-dasharray: 5; 
+    animation-name: animate-dirt;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1; 
+}
+
+@keyframes animate-dirt {
+    from {stroke-dashoffset: 500;
+         stroke: brown; }
+    to {stroke-dashoffset: 0;
+        stroke: transparent; }
+} 
+
 
 .wheels {
     stroke: white;
     stroke-width: 15;
     fill: black;
-    stroke-dasharray: 2;
+    stroke-dasharray: 4;
     transform-box: fill-box;
     transform-origin: 50% 50%;
     animation-name: rotate;
@@ -66,9 +92,9 @@ body {
 }
 
 .inner-wheels {
-    stroke: white;
+    stroke: black;
     stroke-width: 2;
-    fill: black;
+    fill: white;
 }
 
 .tip-tray {

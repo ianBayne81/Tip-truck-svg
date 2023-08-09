@@ -16,6 +16,8 @@
                 <!--create truck and dirt animated with css-->
                 <g class="travel">
 
+                    <rect id="chassis" x="80" y="100" height="30" width="200"></rect>
+
                     <rect id="body" x="265" y="10" height="115" width="75" rx="10"></rect>
 
                     <rect id="window" x="275" y="20" height="50" width="55" rx="5"></rect>
@@ -24,29 +26,33 @@
 
                         <path id="dirt" d="">
 
-                            <animate attributeName="d" dur="4" repeatCount="0" from="m 225 125,C 195 15, 75 15, 50 125"
+                            <animate attributeName="d" dur="4" repeatCount="0" from="m 225 125,C 195 10, 75 10, 50 125"
                              to="m 225 125, C 195 122, 75 122, 50 125"></animate>
 
                         </path>
 
-                        <rect id="tray"x="35" y="75" height="55" width="205" rx="5"></rect>
+                        <path class="dirt-lines" d="m 40 130, C 30 135, 25 145, 20 180"></path> 
+
+                        <path class="dirt-lines" d="m 40 125, C 20 135, 15 145, 10 180"></path>
+
+                        <rect id="tray"x="45" y="75" height="55" width="200" rx="5"></rect>
 
                     </g>
 
-                    <circle class="wheels" cx="100"cy="150" r="35"></circle>
+                    <circle class="wheels" cx="110"cy="150" r="35"></circle>
 
                     <circle class="wheels" cx="275" cy="150" r="35"></circle>
 
-                    <circle class="inner-wheels" cx="100" cy="150" r="8"></circle>
+                    <circle class="inner-wheels" cx="110" cy="150" r="8"></circle>
 
                     <circle class="inner-wheels" cx="275" cy="150" r="8"></circle>
 
                 </g>
 
-                <path id="dirt-pile" d="m 50 195, C 40 50, 20 50, 10 195">
+                <path id="dirt-pile" d="m 50 195, C 40 50, 20 50, 5 195">
 
-                    <animate attributeName="d" dur="3" repeatCount="0" from="m 50 195, C 40 188, 20 188, 10 195"
-                    to="m 50 195, C 40 50, 20 50, 10 195">
+                    <animate attributeName="d" dur="3" repeatCount="0" from="m 50 195, C 40 188, 20 188, 5 195"
+                    to="m 50 195, C 40 50, 20 50, 5 195">
 
                 </path>
 
