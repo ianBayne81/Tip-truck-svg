@@ -3,25 +3,31 @@
     padding: 0;
 }
 
-body {
+/* body {
+
+} */
+
+#page-container {
     height: 100vh;
     width: 100vw;
+    display: block;
+    background-color: black;
 }
 
-#container {
-    height: 100%;
-    width: 100%;
+#svg-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: black;
 }
 
 #svg-area {
     transform: scale(.5);
-    height: 500px;
-    width: 500px;
+    height: 350px;
+    width: 400px;
+    border: 20px ridge  gray;
 }
+
+/*truck parts*/
 
 #body {
     stroke: white;
@@ -43,52 +49,15 @@ body {
 
 #tray {
     stroke: white;
-    stroke-width: 2;
+    stroke-width: 5;
     fill: black;
 }
-
-#dirt {
-    stroke: brown;
-    stroke-width: 5;
-    fill: brown;
-}
-
- .dirt-lines { 
-    stroke: transparent;
-    stroke-width: 5;
-    fill: none;
-    stroke-dasharray: 5; 
-    animation-name: animate-dirt;
-    animation-duration: 5s;
-    animation-timing-function: linear;
-    animation-iteration-count: 1; 
-}
-
-@keyframes animate-dirt {
-    from {stroke-dashoffset: 500;
-         stroke: brown; }
-    to {stroke-dashoffset: 0;
-        stroke: transparent; }
-} 
-
 
 .wheels {
     stroke: white;
     stroke-width: 15;
     fill: black;
     stroke-dasharray: 4;
-    transform-box: fill-box;
-    transform-origin: 50% 50%;
-    animation-name: rotate;
-    animation-delay: 4.5s;
-    animation-duration: 5s;
-    animation-timing-function: linear;
-    animation-iteration-count: 1;
-}
-
-@keyframes rotate {
-    from {transform: rotate(0deg);}
-    to {transform: rotate(360deg);}
 }
 
 .inner-wheels {
@@ -97,32 +66,52 @@ body {
     fill: white;
 }
 
-.tip-tray {
-    animation-name: tip;
-    animation-duration: 4s;
-    animation-iteration-count: 1;
-    animation-timing-function: linear;
+#ground-pile {
+    stroke-width: 5;
 }
 
-@keyframes tip {
-    50% {transform: rotate(-20deg)}
-}
-
-.travel {
-    animation-name: travel;
-    animation-duration: 5s;
-    animation-delay: 4.5s;
-    animation-iteration-count: 1;
-    animation-timing-function: linear;
-}
-
-@keyframes travel {
-    from {transform: translateX(0px);}
-    to {transform: translateX(300px)}
-}
-
-#dirt-pile {
+#truck-dirt {
     stroke: brown;
     stroke-width: 5;
     fill: brown;
+}
+
+/* animate dirt coming out of the back of the truck */
+
+ .dirt-lines { 
+    stroke: transparent;
+    stroke-width: 5;
+    fill: none;
+    stroke-dasharray: 5;
+    animation-name: animate-dirt;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite; 
+}
+
+@keyframes animate-dirt {
+    from {stroke-dashoffset: 1000;}
+    to {stroke-dashoffset: 0;} 
+}
+
+/* button styles */
+
+#button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    background-color: purple;
+    color: white;
+    height: 40px;
+    width: 60px;
+    border: 2px solid rgb(44, 1, 40);
+    border-radius: 25px;
+    margin: 10px;
+}
+
+button:hover {
+    transform: scale(1.2)
 }
