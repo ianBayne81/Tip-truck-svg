@@ -71,14 +71,19 @@ animateTruckPile.fromTo("#truck-dirt", {
     
 const animateGroundPile = gsap.timeline({ease: Linear.easeNone, repeat: 0})
 animateGroundPile.fromTo("#ground-pile", {
-    attr: {d: "m 50 245, C 40 245, 20 245, 5 245"},
+    attr: {d: "m 50 245, C 50 245, 20 245, 5 245"},
     stroke: "transparent",
     fill: "transparent",
-}, {attr: {d: "m 50 245, C 40 100, 20 100, 5 245"},
+}, {attr: {d: "m 60 245, C 50 150, 20 150, 5 245"},
     stroke: "brown",
     fill: "brown",
     delay: 5,
     duration: 6,
+}).to("#ground-pile", {
+    stroke: "transparent",
+    fill: "transparent",
+    delay: 3,
+    repeat: -1,
 }).pause()
 
 // button event handlers and functions
