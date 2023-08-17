@@ -53,6 +53,12 @@
     fill: black;
 }
 
+.text {
+    font-size: 20px;
+    stroke: white;
+    stroke-width: .5;
+}
+
 .wheels {
     stroke: white;
     stroke-width: 15;
